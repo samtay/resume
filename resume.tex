@@ -1,0 +1,87 @@
+% LaTeX resume using res.cls
+\documentclass[margin]{res}
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font 
+\usepackage{hyperref}
+\setlength{\textwidth}{5.1in} % set width of text portion
+
+\begin{document}
+
+% Center the name over the entire width of resume:
+ \moveleft.5\hoffset\centerline{\large\bf Samuel Chong Tay}
+% Draw a horizontal line the whole width of resume:
+ \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
+% address begins here
+% Again, the address lines must be centered over entire width of resume:
+ \moveleft.5\hoffset\centerline{852 Centerwood Drive}
+ \moveleft.5\hoffset\centerline{Charleston, SC 29412}
+ \moveleft.5\hoffset\centerline{(631) 291-3866}
+
+\begin{resume}
+ 
+% TODO Update this objective
+\section{OBJECTIVE}
+  A dynamic position in software development that allows learning
+  and expanding into new technologies to solve interesting problems.
+  % TODO make this less boilerplate
+
+\section{EDUCATION}
+  {\sl Bachelor of Science}, 2013 \\
+  Kenyon College, Gambier, OH \\
+  Major: Mathematics \\
+  Minor: Scientific Computing \\
+  GPA: 3.91 \\
+  Honors: % TODO Current resume pdf is missing full honors & awards
+ 
+ 
+\section{COMPUTER \\ SKILLS}
+  {\sl Languages \& Software:} Fluent in Javascript, C++, and PHP.
+    Experience in bash scripting and writing docker compositions. \\ 
+  {\sl Operating Systems:} Linux and Mac OS.
+ 
+\section{EXPERIENCE}
+  {\sl Senior Applications Engineer} \hfill May 2014 - Present \\
+  Blue Acorn, Charleston, SC
+  \begin{itemize}  \itemsep -2pt %reduce space between items
+    \item apprentice -> senior achievement
+    \item contributions to internal infastructure such as deployment
+      tools and docker management scripts
+    \item extensive magento and magento2 development
+  \end{itemize}
+
+  {\sl Reporting Analyst} \hfill            September 2013 - May 2014 \\
+  SIB Development and Consulting
+  \begin{itemize}  \itemsep -2pt %reduce space between items
+    \item Built reports using Excel and Acrobat to validate savings for clients.
+  \end{itemize} 
+
+  {\sl Life Skills Trainer} \hfill        Summer 2012 \\
+  Independent Support Services, Rock Hill, NY
+  \begin{itemize}
+    \item Tutored an autistic client in math and successfully increased placement exam
+      scores, allowing the client to pursue their desired program at the SUNY Nassau
+      Community College.
+  \end{itemize} 
+ 
+  {\sl Research Assistant} \hfill        Summer 2011 \\
+  AstroParticule et Cosmologie, Paris, France
+  \begin{itemize}
+    \item Conducted research and data analysis in correlation of temperature variation and
+      phase noise for LOT (LISA On Table), an optical simulator for the LISA mission,
+      under Dr. Hubert Halloin.
+  \end{itemize} 
+
+  {\sl Research Assistant} \hfill        Summer 2010 \\
+  Valparaiso University, Valparaiso, IN
+  \begin{itemize}
+    \item Explored pattern avoidance in ternary trees (combinatorial mathematics) in a
+      team of three undergraduate students under mentor Dr. Lara Pudwell.
+  \end{itemize} 
+
+\section{PUBLICATIONS}             
+  “Pattern Avoidance in Ternary Trees”, Nathan Gabriel, Katherine Peske,
+  Lara Pudwell, and Samuel Tay, Journal of Integer Sequences 15 (2012) 12.1.5. \\
+  \url{http://arxiv.org/abs/1110.2225}
+
+\end{resume}
+\end{document}
