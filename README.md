@@ -2,4 +2,4 @@
 Personal resume in LaTeX
 
 ### View PDF
-[Resume](https://github.com/SamTay/resume/blob/master/resume.pdf)
+[Default Resume](https://github.com/SamTay/resum/blob/master/default/resume.pdf)
