@@ -1,2 +1,7 @@
 *.dvi
 *.log
+*.swp
+*.aux
+*.bcf
+*.out
+*.run.xml
