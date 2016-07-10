@@ -6,6 +6,8 @@
 \usepackage{xcolor}
 \usepackage{smartdiagram}
 \usepackage{fontspec}
+\usepackage{MnSymbol}
+%\usepackage{amssymb}
 % if you want to add fontawesome package
 % you need to compile the tex file with LuaLaTeX
 % References:
@@ -48,13 +50,15 @@
 
 \addbibresource{bibliography.bib}
 \RequirePackage{xcolor}
-\definecolor{pblue}{HTML}{0395DE}
+%\definecolor{pblue}{HTML}{0395DE}
+\definecolor{pblue}{HTML}{00A388}
+% \definecolor{pblue}{HTML}{DC3522}
 
 \begin{document}
 \header{Sam}{Tay}
       {Software Engineer}
-      
-% Fake text to add separator      
+
+% Fake text to add separator
 \fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
 .....
 }}
@@ -142,9 +146,9 @@
 ~
 ~
 \section{OS Preference}
-  \textbf{Linux}\includegraphics[scale=0.40]{img/5stars.png}
-  \textbf{MacOS}\includegraphics[scale=0.40]{img/4stars.png}
-  \textbf{Windows}\includegraphics[scale=0.40]{img/1stars.png}
+  \textbf{Linux} \small{${\color{pblue}\filledlargestar \filledlargestar \filledlargestar \filledlargestar \filledlargestar}$}
+  \textbf{MacOS} \small{${\color{pblue}\filledlargestar \filledlargestar \filledlargestar \filledlargestar \largestar}$}
+  \mbox{\textbf{Windows} \small{${\color{pblue}\filledlargestar\largestar\largestar\largestar\largestar}$}}
   ~
   ~
 \end{aside}
