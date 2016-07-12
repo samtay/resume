@@ -6,3 +6,4 @@ Personal resume in LaTeX
 
 [Default](https://github.com/SamTay/resume/blob/master/awesome/resume.pdf)
 
+[Extended](https://github.com/SamTay/resume/blob/master/awesome/resume_extended.pdf)
