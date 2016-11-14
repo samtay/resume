@@ -2,8 +2,8 @@
 Personal resume in LaTeX
 
 ### View PDF
-[Classic](./default/resume.pdf)
+[Classic](./classic/resume.pdf)
 
-[Default](./awesome/resume.pdf)
+[Default](./default/resume.pdf)
 
-[Extended](./awesome/resume_extended.pdf)
+[Extended](./default/resume_extended.pdf)

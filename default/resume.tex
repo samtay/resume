@@ -1,83 +1,88 @@
-% LaTeX resume using res.cls
-\documentclass[margin]{res}
-%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
-%\usepackage{newcent}   % uses new century schoolbook postscript font 
-\usepackage{hyperref}
-\setlength{\textwidth}{5.1in} % set width of text portion
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Themes: Awesome-CV
+\documentclass[11pt, a4paper]{awesome-cv}
+
+%%% Override a directory location for fonts(default: 'fonts/')
+\fontdir[fonts/]
+
+%%% Configure a directory location for sections
+\newcommand*{\sectiondir}{resume/}
+
+%%% Override color
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+%% Color for highlight
+% Define your custom color if you don't like awesome colors
+\colorlet{awesome}{awesome-emerald}
+% \definecolor{awesome}{HTML}{CA63A8}
+%% Colors for text
+%\definecolor{darktext}{HTML}{414141}
+%\definecolor{text}{HTML}{414141}
+%\definecolor{graytext}{HTML}{414141}
+%\definecolor{lighttext}{HTML}{414141}
+
+%%% Override a separator for social informations in header(default: ' | ')
+%\headersocialsep[\quad\textbar\quad]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     3rd party packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Needed to divide into several files
+\usepackage{import}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Personal Data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Essentials
+\name{Samuel Chong}{Tay}
+\address{852 Centerwood Drive, Charleston, SC 29412}
+\mobile{(631) 291-3866}
+%%% Social
+\email{sam.chong.tay@gmail.com}
+%\homepage{www.posquit0.com}
+\github{samtay}
+\linkedin{sam-tay}
+%%% Optionals
+\position{Software Engineer{\enskip\cdotp\enskip}Mathematician}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Make a footer for CV with three arguments(<left>, <center>, <right>)
+\makecvfooter
+  {\today}
+  {Samuel C. Tay~~~·~~~Résumé}
+  {\thepage}
 
 \begin{document}
+%%% Make a header for CV with personal data
+\makecvheader
 
-% Center the name over the entire width of resume:
- \moveleft.5\hoffset\centerline{\large\bf Samuel Chong Tay}
-% Draw a horizontal line the whole width of resume:
- \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
-% address begins here
-% Again, the address lines must be centered over entire width of resume:
- \moveleft.5\hoffset\centerline{852 Centerwood Drive}
- \moveleft.5\hoffset\centerline{Charleston, SC 29412}
- \moveleft.5\hoffset\centerline{(631) 291-3866}
+%%% Import contents
+\import{\sectiondir}{education.tex}
+\import{\sectiondir}{experience.tex}
+\import{\sectiondir}{skills.tex}
+\import{\sectiondir}{certifications.tex}
+\import{\sectiondir}{publications.tex}
 
-\begin{resume}
- 
-\section{OBJECTIVE}
-  A dynamic position in software development that allows learning
-  and expanding into new technologies to solve interesting problems.
-  % TODO make this less boilerplate
-
-\section{EDUCATION}
-  {\sl Bachelor of Science} \hfill 2013 \\
-  Kenyon College \hfill Gambier, OH \\
-  Major: Mathematics; Minor: Scientific Computing \\
-  GPA: 3.91
-\section{COMPUTER \\ SKILLS}
-  {\sl Languages \& Software:} Fluent in PHP, Javascript, and C++.
-    Experience in bash scripting and writing docker compositions. \\
-  {\sl Operating Systems:} Linux and Mac OS.
- 
-\section{EXPERIENCE}
-  {\sl Senior Applications Engineer} \hfill May 2014 - Present \\
-  Blue Acorn \hfill Charleston, SC
-  \begin{itemize}  \itemsep -2pt %reduce space between items
-    \item Transformed client requirements into custom features and built abstract reusable modules.
-    \item Contributed to internal infastructure initiatives such as deployment tools,
-      Hipchat Connect addons, and a docker composition-machine management tool.
-    \item Promoted from Apprentice to Senior Applications Engineer within two years.
-  \end{itemize}
-
-  {\sl Reporting Analyst} \hfill            September 2013 - May 2014 \\
-  SIB Development and Consulting \hfill Charleston, SC
-  \begin{itemize}  \itemsep -2pt %reduce space between items
-    \item Built reports using Excel and Acrobat to validate savings for clients.
-  \end{itemize}
-
-  {\sl Math Tutor} \hfill        Summer 2012 \\
-  Independent Support Services \hfill Rock Hill, NY
-  \begin{itemize}
-    \item Tutored an autistic client in math and successfully increased placement exam
-      scores, allowing the client to pursue their desired program at the SUNY Nassau
-      Community College.
-  \end{itemize} 
- 
-  {\sl Research Assistant} \hfill        Summer 2011 \\
-  AstroParticule et Cosmologie \hfill Paris, France
-  \begin{itemize}
-    \item Conducted research and data analysis in correlation of temperature variation and
-      phase noise for LOT (LISA On Table), an optical simulator for the LISA mission,
-      under Dr. Hubert Halloin.
-  \end{itemize} 
-
-  {\sl Research Assistant} \hfill        Summer 2010 \\
-  Valparaiso University \hfill Valparaiso, IN
-  \begin{itemize}
-    \item Explored pattern avoidance in ternary trees (combinatorial mathematics) in a
-      team of three undergraduate students under mentor Dr. Lara Pudwell.
-  \end{itemize} 
-
-\section{PUBLICATIONS}             
-  {\sl Pattern Avoidance in Ternary Trees} \\
-  Nathan Gabriel, Katherine Peske, Lara Pudwell, and Samuel Tay \\
-  Journal of Integer Sequences 15 (2012) 12.1.5. \\
-  \url{http://arxiv.org/abs/1110.2225}
-
-\end{resume}
 \end{document}
