@@ -14,75 +14,78 @@
 %
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Configuration
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Themes: Awesome-CV
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
 \documentclass[11pt, a4paper]{awesome-cv}
 
-%%% Override a directory location for fonts(default: 'fonts/')
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
 \fontdir[fonts/]
 
-%%% Configure a directory location for sections
-\newcommand*{\sectiondir}{resume/}
-
-%%% Override color
+% Color for highlights
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
 %                 awesome-nephritis, awesome-concrete, awesome-darknight
-%% Color for highlight
-% Define your custom color if you don't like awesome colors
 \colorlet{awesome}{awesome-emerald}
+% Uncomment if you would like to specify your own color
 % \definecolor{awesome}{HTML}{CA63A8}
-%% Colors for text
-%\definecolor{darktext}{HTML}{414141}
-%\definecolor{text}{HTML}{414141}
-%\definecolor{graytext}{HTML}{414141}
-%\definecolor{lighttext}{HTML}{414141}
 
-%%% Override a separator for social informations in header(default: ' | ')
-%\headersocialsep[\quad\textbar\quad]
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
 
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     3rd party packages
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Needed to divide into several files
-\usepackage{import}
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Personal Data
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Essentials
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo{./examples/profile.png}
 \name{Samuel Chong}{Tay}
-\address{852 Centerwood Drive, Charleston, SC 29412}
-\mobile{(631) 291-3866}
-%%% Social
-\email{sam.chong.tay@gmail.com}
-%\homepage{www.posquit0.com}
-\github{samtay}
-\linkedin{sam-tay}
-%%% Optionals
 \position{Software Engineer{\enskip\cdotp\enskip}Mathematician}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Content
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Make a footer for CV with three arguments(<left>, <center>, <right>)
+\address{852 Centerwood Drive, Charleston, SC 29412}
+\email{sam.chong.tay@gmail.com}
+\mobile{(631) 291-3866}
+\github{samtay}
+\linkedin{sam-tay}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
 \makecvfooter
   {\today}
   {Samuel C. Tay~~~·~~~Résumé}
   {\thepage}
 
-\begin{document}
-%%% Make a header for CV with personal data
-\makecvheader
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+\input{resume/summary.tex}
+\input{resume/experience.tex}
+\input{resume/skills.tex}
+\input{resume/education.tex}
+\input{resume/publications.tex}
 
-%%% Import contents
-\import{\sectiondir}{education.tex}
-\import{\sectiondir}{experience.tex}
-\import{\sectiondir}{skills.tex}
-\import{\sectiondir}{certifications.tex}
-\import{\sectiondir}{publications.tex}
-
+%-------------------------------------------------------------------------------
 \end{document}
