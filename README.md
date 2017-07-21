@@ -1,9 +1,11 @@
 # resume
 Personal resume in LaTeX
 
-### View PDF
-[Classic](./classic/resume.pdf)
+[![Resume](https://img.shields.io/badge/resume-pdf-green.svg)](https://raw.githubusercontent.com/samtay/resume/master/default/resume.pdf)
 
-[Default](./default/resume.pdf)
+### other versions
+[default](https://raw.githubusercontent.com/samtay/resume/master/default/resume.pdf)
 
-[Extended](./default/resume_extended.pdf)
+[classic](https://raw.githubusercontent.com/samtay/resume/master/classic/resume.pdf)
+
+[extended](https://raw.githubusercontent.com/samtay/resume/master/default/resume_extended.pdf)
