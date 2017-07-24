@@ -1,7 +1,6 @@
-# resume
+# resume [![Resume](https://img.shields.io/badge/resume-pdf-green.svg)](https://raw.githubusercontent.com/samtay/resume/master/default/resume.pdf)
 Personal resume in LaTeX
 
-[![Resume](https://img.shields.io/badge/resume-pdf-green.svg)](https://raw.githubusercontent.com/samtay/resume/master/default/resume.pdf)
 
 ### other versions
 [awesome](https://raw.githubusercontent.com/samtay/resume/master/awesome/resume.pdf)
