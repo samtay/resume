@@ -10,10 +10,10 @@ main() {
   mkdir "$company_dir"
 
   for resource in "${resources[@]}"; do
-    ln -s ../../awesome/"$resource" "$company_dir"
+    ln -s ../../resume/"$resource" "$company_dir"
   done
 
-  cp awesome/coverletter.tex "$company_dir"
+  cp resume/coverletter.tex "$company_dir"
 
   cd "$company_dir"
   if [[ ! -z "$company_label" ]]; then
