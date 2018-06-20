@@ -1,0 +1,23 @@
+#!/usr/bin/env stack
+{- stack runghc
+  --resolver lts-11.14
+  --install-ghc
+  --package shake
+-}
+
+import Development.Shake
+import Development.Shake.Command
+import Development.Shake.FilePath
+import Development.Shake.Util
+
+-- TODO loop through cover_letters and require pdf for each .tex there.
+main :: IO ()
+main = shakeArgs shakeOptions{shakeFiles="dist"} $ do
+  want ["dist/resume.pdf"]
+
+  phony "clean" $ do
+    putNormal "Cleaning files in dist"
+    removeFilesAfter "dist" ["//*"]
+
+  "dist/resume.pdf" %> \out -> do
+    cmd_ (Cwd "resume") "xelatex" [dropDirectory1 $ out -<.> "tex"]
