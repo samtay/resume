@@ -13,11 +13,14 @@ import Development.Shake.Util
 -- TODO loop through cover_letters and require pdf for each .tex there.
 main :: IO ()
 main = shakeArgs shakeOptions{shakeFiles="dist"} $ do
-  want ["dist/resume.pdf"]
+  want ["dist/resume.pdf", "dist/cv.pdf"]
+
+  "dist/*.pdf" %> \out -> do
+    command_
+      [Cwd $ takeBaseName out, EchoStdout False, EchoStderr True]
+      "xelatex"
+      ["-output-directory","../dist",dropDirectory1 $ out -<.> "tex"]
 
   phony "clean" $ do
     putNormal "Cleaning files in dist"
     removeFilesAfter "dist" ["//*"]
-
-  "dist/resume.pdf" %> \out -> do
-    cmd_ (Cwd "resume") "xelatex" [dropDirectory1 $ out -<.> "tex"]
