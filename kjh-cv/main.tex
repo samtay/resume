@@ -1,0 +1,377 @@
+%%% A template to produce a nice-looking Curriculum Vitae.
+%%% Kieran Healy <kjhealy@gmail.com>
+%%% Most recent version is at http://kjhealy.github.com/kjh-vita
+%%%
+%%% ------------------------------------------------------------------------
+%%% Requirements that are included in a modern tex distribution:
+%%% ------------------------------------------------------------------------
+%%% xelatex
+%%% fontspec.sty
+%%% hyperrref.sty
+%%% xunicode.sty
+%%% color.sty
+%%% url.sty
+%%% fancyhdr.sty
+%%% memoir.cls
+%%% fontawesome.sty
+%%%
+%%% 
+%%% 
+%%% ------------------------------------------------------------------------
+%%% Requirements from https://github.com/kjhealy/latex-custom-kjh
+%%% ------------------------------------------------------------------------
+%%% org-preamble-xelatex.sty
+%%% memoir-article-styles.sty
+%%%
+%%% ------------------------------------------------------------------------
+%%% Optional
+%%% ------------------------------------------------------------------------
+%%% git
+%%% vc.sty
+%%% revnum.sty
+%%% Fonts
+%%%
+%%% ------------------------------------------------------------------------
+%%% Note
+%%%------------------------------------------------------------------------
+%%% Because this is a hand-tweaked file, be on the look out for \medksip, 
+%%% \bigskip and \newpage commands here and there, which are used to balance
+%%% the layout or avoid widows & orphans, etc. You should of course add or 
+%%% remove these as needed.
+%%%------------------------------------------------------------------------
+
+\documentclass[11pt,article,oneside]{memoir}   
+\usepackage{org-preamble-xelatex} 
+\usepackage{fontawesome,url}
+
+
+%%%------------------------------------------------------------------------
+%%% Metadata
+%%%------------------------------------------------------------------------
+
+%% Change as needed. Or just add me as a coauthor. Only some of these are 
+%% used below in the hyperref declaration and address banner section.
+\def\myauthor{Samuel Tay}
+\def\mytitle{Vita}
+\def\mycopyright{\myauthor}
+\def\mykeywords{}
+\def\mybibliostyle{plain}
+\def\mybibliocommand{}
+\def\mysubtitle{}
+\def\myaffiliation{}
+\def\myaddress{852 Centerwood Drive}
+\def\myemail{sam.chong.tay@gmail.com}
+\def\myweb{https://samtay.github.io}
+\def\myphone{(631) 291-3866}
+\def\myfax{}
+\def\mytwitter{}
+\def\mygithub{@samtay}
+\def\myversion{}
+\def\myrevision{}
+
+%%%------------------------------------------------------------------------  
+%%% Git version tracking 
+%%%------------------------------------------------------------------------
+
+%% If you don't use git or the vc package (from CTAN), comment this out.
+%% If you comment it out, be sure to remove the \rfoot comment below, too.
+%\input{vc}
+
+%%%------------------------------------------------------------------------
+%%% Document
+%%%------------------------------------------------------------------------
+\begin{document}
+
+%% Choose fonts for use with xelatex
+%% Minion and Myriad are widely available, from Adobe. 
+%% Pragmata is available to buy at http://www.fsd.it/fonts/pragma.htm
+%% and is worth every penny. Any good monospace font will work fine, though.
+%% Consolas or inconsolata are good alternatives.
+% 
+% commented by Karol Kozioł
+% \setromanfont[Mapping={tex-text}, 
+% 	Numbers={OldStyle},
+% 	Ligatures={Common}]{Minion Pro}
+% \setsansfont[Mapping=tex-text,
+% 	Ligatures={Common}, 
+% 	Colour=AA0000]{Unit-Medium}
+% \setmonofont[Mapping=tex-text,Scale=0.72]{PragmataPro} 
+
+% \newfontface\scheader[SmallCapsFont={Minion Pro},SmallCapsFeatures={Letters=SmallCaps}]{Minion Pro}
+
+% \newfontface\addressblock[Mapping={tex-text}, 
+% 	Numbers={OldStyle},
+% 	Ligatures={Common}]{Minion Pro Medium Caption}
+% 
+
+% added by Karol Kozioł to fit ShareLaTeX
+\setromanfont[
+Mapping={tex-text}, 
+Numbers={OldStyle},
+Ligatures={Common},
+BoldFont=CrimsonText-Bold.ttf,
+ItalicFont=CrimsonText-Italic.ttf,
+BoldItalicFont=CrimsonText-BoldItalic.ttf
+]{CrimsonText-Roman.ttf}
+
+\setsansfont[
+Mapping=tex-text,
+Ligatures={Common}, 
+Colour=AA0000,
+BoldFont=Lato-Bold.ttf,
+ItalicFont=Lato-Italic.ttf,
+BoldItalicFont=Lato-BoldItalic.ttf
+]{Lato-Regular.ttf}
+	
+\setmonofont[Mapping=tex-text,Scale=0.72]{texgyrecursor-regular.otf} 
+
+\newfontface\scheader[SmallCapsFont={LinLibertine_R.otf},SmallCapsFeatures={Letters=SmallCaps}]{LinLibertine_R.otf}
+
+\newfontface\addressblock[Mapping={tex-text}, 
+	Numbers={OldStyle},
+	Ligatures={Common}]{CrimsonText-Roman.ttf}
+
+
+%%%------------------------------------------------------------------------
+%%% Local commands
+%%%------------------------------------------------------------------------
+
+%% Marginal header
+%% Note: as the document goes on you may need to introduce a (gradually increasing)
+%% \vspace element to keep the marginal header pleasingly aligned with the first 
+%% item in the body text. Like this: \marginhead{{\vskip 0.4em}Grants}, or 
+%% \marginhead{{\vskip 0.8em}Service}. Experiment as needed.
+\newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize\vspace{-1em}\flushright #1}}}}
+
+
+%% [optional] custom ampersand (font consistent with the one chosen above)
+% \newcommand{\amper}{{\fontspec[Scale=.95,Colour=AA0000]{Minion Pro Medium}\selectfont\&\,}}
+
+%% No bullets on labels
+\renewcommand{\labelitemi}{~} 
+
+%% Custom hanging indent for vita items
+\def\ind{\hangindent=1 true cm\hangafter=1 \noindent}
+%\def\ind{\hangindent=18pt\hangafter=1 \noindent}
+\def\labelitemi{~}
+\renewcommand{\labelitemii}{~}
+
+%%%------------------------------------------------------------------------
+%%% Page layout
+%%%------------------------------------------------------------------------
+
+% These lines will insert git revision info in the footer, using the vc
+% package---see docs for vc package for details. Comment out this line
+% if you're not using vc, and also remove the \input{vc} line above.
+\pagestyle{kjh}
+\pagenumbering{gobble}
+%\pagestyle{kjhgit}
+
+
+%%%------------------------------------------------------------------------
+%%% Address and contact block
+%%%------------------------------------------------------------------------
+\hfill
+\begin{minipage}[t]{2.95in}
+  \vspace{0.34in}
+  \flushright
+    {\footnotesize 852 Centerwood Drive \\ \vspace{-0.05in} Charleston, \textsc{SC} 29412}  
+\end{minipage}
+\hfill
+\begin{minipage}[t]{1.6in}
+  \flushright
+    {\footnotesize  \texttt{\href{tel:\myphone}{\myphone}} \, \faPhone} \\
+    {\footnotesize  \texttt{\href{https://github.com/samtay}{\mygithub}} \, \faGithub}  \\ 
+    {\footnotesize  \texttt{\href{mailto:\myemail}{\myemail}} \, \faEnvelope} \\
+    {\footnotesize  \texttt{\href{\myweb}{\myweb}} \, \faGlobe}
+\end{minipage}
+
+
+%% Name 
+% original format was medskip instead of negative vspace, this keeps things aligned.
+% need to decide which is better.
+%\medskip
+\vspace{-1em}
+\noindent{\LARGE\scheader \textsc{sam tay}}
+\reversemarginpar
+
+\bigskip
+\medskip
+
+%% Education
+\marginhead{\sffamily {{\vskip -0.03em} education}}
+
+\ind B.A., Mathematics \& Scientific Computing, Kenyon College, 2013. \\
+\footnotesize
+  Thesis: \emph{Logic via Algebra}. Awarded distinction. \\
+  GPA: 3.91
+\normalsize
+\vspace{0.05in}
+
+\bigskip
+
+
+%% Publications
+\marginhead{\sffamily publications}
+
+\ind Nathan Gabriel, Katherine Peske, Lara Pudwell, and Samuel Tay. 2012.
+  ``\href{http://arxiv.org/abs/1110.2225}{Pattern Avoidance in Ternary Trees}.''
+  \emph{Journal of Integer Sequences} 15:12.1.5. \vspace{0.05in}
+
+\bigskip
+
+
+%% Awards
+\marginhead{\sffamily {{\vskip -0.3em} honors \newline \& awards}}
+
+\ind Phi Beta Kappa Society.
+
+\ind Pi Mu Epsilon National Mathematics Honor Society.
+
+\ind Newman's Own Foundation Scholarship, Kenyon College, 2009-2013.
+
+\ind Zakov Family Scholarship, Kenyon College, 2011-2013.
+
+\ind John H. Dunlap IV Scholarship, Kenyon College, 2011-2013. \\
+\footnotesize
+  Funding for deserving mathematics majors who have demonstrated excellence in
+  the \\ programming and/or use of computer applications.
+\normalsize
+
+\ind Reginald B. Allen Prize, Kenyon College, 2013. \\
+\footnotesize
+  Annual award to a student who the professors of the Department of
+  Mathematics decide has done the most outstanding work in mathematics.
+\normalsize
+
+\ind Wendell D. Lindstrom Memorial Prize, Kenyon College, 2011. \\
+\footnotesize
+  Award for extraordinary work by first or second year students in mathematics.
+\normalsize
+
+\ind Undergraduate Poster Session Presentation Prize, Joint Mathematics Meeting, 2011. \\
+
+\bigskip
+ 
+
+%% Research
+\marginhead{\sffamily {\vskip 0em} research experience}
+
+\ind \emph{Research Assistant} \hfill {\small Summer 2011}
+
+\ind AstroParticule et Cosmologie \hfill {\small Paris, France}
+\small
+\begin{itemize}
+  \item Conducted research investigating the correlation of temperature
+    variation and phase noise for LOT (LISA On Table), an optical simulator for
+    the LISA mission, under Dr. Hubert Halloin.
+\end{itemize}
+\normalsize
+
+\ind \emph{Research Assistant} \hfill {\small Summer 2010}
+
+\ind Valparaiso University \hfill {\small Valparaiso, IN}
+\small
+\begin{itemize}
+  \item Explored pattern avoidance in ternary trees in a team of three
+    undergraduate students under mentor Dr. Lara Pudwell.
+  \item Presented findings at the JMM Undergraduate Poster Session and received
+    the \emph{MAA Outstanding Presentation Prize}.
+\end{itemize}
+\normalsize
+
+\bigskip
+
+
+%%%%% Next page, start numbering!
+%\newpage
+%\pagenumbering{arabic}
+%\setcounter{page}{2}
+%%%%%
+
+
+%% Teaching
+\marginhead{\sffamily {\vskip -0.3em} teaching \newline experience}
+
+\ind \emph{Math Tutor} \hfill {\small Summer 2012}
+
+\ind Independent Support Services \hfill {\small Rock Hill, NY}
+\small
+\begin{itemize}
+  \item Tutored an autistic client in math and successfully increased placement
+    exam scores, allowing the client to pursue their desired program at the
+    SUNY Nassau Community College.
+\end{itemize}
+\normalsize
+
+\ind \emph{Lead Tutor} \hfill {\small January 2011 - May 2013}
+
+\ind Kenyon College \hfill {\small Gambier, OH}
+\small
+\begin{itemize}
+  \item Attend class and assist with teaching Calculus and Maple syntax.
+\end{itemize}
+\normalsize
+
+\bigskip
+
+
+%% Work
+\marginhead{\sffamily {\vskip -0.3em} work \newline experience}
+
+\ind \emph{Software Developer} \hfill {\small August 2017 - Present}
+\vspace{0.1em}
+
+\ind Wrinkl Inc. \hfill {\small Charleston, SC}
+\small
+\begin{itemize}
+  \item Developed a websocket-driven chat application in Haskell.
+  \item Leveraged advanced type system features to achieve a high level of code
+    safety.
+  \item Languages: Haskell, Nix.
+\end{itemize}
+\normalsize
+
+\ind \emph{Software Developer} \hfill {\small April 2017 - August 2017}
+\vspace{0.1em}
+
+\ind ExpandShare \hfill {\small Charleston, SC}
+\small
+\begin{itemize}
+  \item Built core features and microservices for a Learning Manage System.
+  \item Languages: Python, Javascript
+\end{itemize}
+\normalsize
+
+\ind \emph{Applications Engineer} \hfill {\small May 2014 - February 2017}
+\vspace{0.1em}
+
+\ind Blue Acorn \hfill {\small Charleston, SC}
+\small
+\begin{itemize}
+  \item Developed reusable modules in an object oriented MVC eCommerce
+    framework.
+  \item Contributed to internal infastructure in the form of deployment tools,
+    Hipchat addons, and a docker composition-machine management tool.
+  \item Languages: PHP, Javascript, Bash.
+\end{itemize}
+\normalsize
+
+\ind \emph{Reporting Analyst} \hfill {\small September 2013 - May 2014}
+\vspace{0.1em}
+
+\ind SIB Development \& Consulting \hfill {\small Charleston, SC}
+\small
+\begin{itemize}
+  \item Validated client savings using Microsoft Excel and Adobe Acrobat.
+  \item 
+\end{itemize}
+\normalsize
+
+\bigskip
+
+%\newpage
+
+\medskip
+
+\end{document}

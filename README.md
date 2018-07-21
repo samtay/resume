@@ -1,4 +1,4 @@
-# resume [![Resume](https://img.shields.io/badge/resume-pdf-brightgreen.svg)](https://raw.githubusercontent.com/samtay/resume/master/artifacts/resume.pdf) [![CV](https://img.shields.io/badge/cv-pdf-blue.svg)](https://raw.githubusercontent.com/samtay/resume/master/artifacts/cv.pdf)
+# resume [![Resume](https://img.shields.io/badge/resume-pdf-brightgreen.svg)](https://raw.githubusercontent.com/samtay/resume/master/artifacts/awesome-cv.pdf) [![CV](https://img.shields.io/badge/cv-pdf-blue.svg)](https://raw.githubusercontent.com/samtay/resume/master/artifacts/kjh-cv.pdf)
 
 Personal resume in LaTeX
 

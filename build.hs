@@ -16,13 +16,15 @@ import Development.Shake.Util
 -- not exist, do the logic found in new_coverletter.sh
 main :: IO ()
 main = shakeArgs shakeOptions{shakeFiles="dist"} $ do
-  want ["dist/resume.pdf", "dist/cv.pdf"]
+  want ["dist/awesome-cv.pdf", "dist/classic-cv.pdf", "dist/kjh-cv.pdf"]
 
   "dist/*.pdf" %> \out -> do
+    let n = takeBaseName out
+    need =<< fmap (n </>) <$> getDirectoryFiles n ["//*"]
     command_
-      [Cwd $ takeBaseName out, EchoStdout False, EchoStderr True]
+      [Cwd n, EchoStdout True, EchoStderr True]
       "xelatex"
-      ["-output-directory","../dist",dropDirectory1 $ out -<.> "tex"]
+      ["-output-directory", "../dist", "-jobname", n, "main.tex"]
 
   phony "clean" $ do
     putNormal "Cleaning files in dist"
