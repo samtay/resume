@@ -16,7 +16,11 @@ import Development.Shake.Util
 -- not exist, do the logic found in new_coverletter.sh
 main :: IO ()
 main = shakeArgs shakeOptions{shakeFiles="dist"} $ do
-  want ["dist/awesome-cv.pdf", "dist/classic-cv.pdf", "dist/kjh-cv.pdf"]
+  let targets = [ "awesome-cv.pdf"
+                , "classic-cv.pdf"
+                , "kjh-cv.pdf"
+                ]
+  want ["dist" </> target | target <- targets]
 
   "dist/*.pdf" %> \out -> do
     let n = takeBaseName out
@@ -29,3 +33,9 @@ main = shakeArgs shakeOptions{shakeFiles="dist"} $ do
   phony "clean" $ do
     putNormal "Cleaning files in dist"
     removeFilesAfter "dist" ["//*"]
+
+  phony "artifacts" $ do
+    need ["dist" </> target | target <- targets]
+    putNormal "Copying targets from dist to artifacts"
+    mapM_ (uncurry copyFileChanged) $
+      [("dist" </> t, "artifacts" </> t) | t <- targets]
