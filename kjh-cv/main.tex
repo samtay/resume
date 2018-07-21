@@ -15,8 +15,8 @@
 %%% memoir.cls
 %%% fontawesome.sty
 %%%
-%%% 
-%%% 
+%%%
+%%%
 %%% ------------------------------------------------------------------------
 %%% Requirements from https://github.com/kjhealy/latex-custom-kjh
 %%% ------------------------------------------------------------------------
@@ -34,14 +34,14 @@
 %%% ------------------------------------------------------------------------
 %%% Note
 %%%------------------------------------------------------------------------
-%%% Because this is a hand-tweaked file, be on the look out for \medksip, 
+%%% Because this is a hand-tweaked file, be on the look out for \medksip,
 %%% \bigskip and \newpage commands here and there, which are used to balance
-%%% the layout or avoid widows & orphans, etc. You should of course add or 
+%%% the layout or avoid widows & orphans, etc. You should of course add or
 %%% remove these as needed.
 %%%------------------------------------------------------------------------
 
-\documentclass[11pt,article,oneside]{memoir}   
-\usepackage{org-preamble-xelatex} 
+\documentclass[11pt,article,oneside]{memoir}
+\usepackage{org-preamble-xelatex}
 \usepackage{fontawesome,url}
 
 
@@ -49,7 +49,7 @@
 %%% Metadata
 %%%------------------------------------------------------------------------
 
-%% Change as needed. Or just add me as a coauthor. Only some of these are 
+%% Change as needed. Or just add me as a coauthor. Only some of these are
 %% used below in the hyperref declaration and address banner section.
 \def\myauthor{Samuel Tay}
 \def\mytitle{Vita}
@@ -69,8 +69,8 @@
 \def\myversion{}
 \def\myrevision{}
 
-%%%------------------------------------------------------------------------  
-%%% Git version tracking 
+%%%------------------------------------------------------------------------
+%%% Git version tracking
 %%%------------------------------------------------------------------------
 
 %% If you don't use git or the vc package (from CTAN), comment this out.
@@ -83,30 +83,30 @@
 \begin{document}
 
 %% Choose fonts for use with xelatex
-%% Minion and Myriad are widely available, from Adobe. 
+%% Minion and Myriad are widely available, from Adobe.
 %% Pragmata is available to buy at http://www.fsd.it/fonts/pragma.htm
 %% and is worth every penny. Any good monospace font will work fine, though.
 %% Consolas or inconsolata are good alternatives.
-% 
+%
 % commented by Karol Kozioł
-% \setromanfont[Mapping={tex-text}, 
+% \setromanfont[Mapping={tex-text},
 % 	Numbers={OldStyle},
 % 	Ligatures={Common}]{Minion Pro}
 % \setsansfont[Mapping=tex-text,
-% 	Ligatures={Common}, 
+% 	Ligatures={Common},
 % 	Colour=AA0000]{Unit-Medium}
-% \setmonofont[Mapping=tex-text,Scale=0.72]{PragmataPro} 
+% \setmonofont[Mapping=tex-text,Scale=0.72]{PragmataPro}
 
 % \newfontface\scheader[SmallCapsFont={Minion Pro},SmallCapsFeatures={Letters=SmallCaps}]{Minion Pro}
 
-% \newfontface\addressblock[Mapping={tex-text}, 
+% \newfontface\addressblock[Mapping={tex-text},
 % 	Numbers={OldStyle},
 % 	Ligatures={Common}]{Minion Pro Medium Caption}
-% 
+%
 
 % added by Karol Kozioł to fit ShareLaTeX
 \setromanfont[
-Mapping={tex-text}, 
+Mapping={tex-text},
 Numbers={OldStyle},
 Ligatures={Common},
 BoldFont=CrimsonText-Bold.ttf,
@@ -116,18 +116,18 @@ BoldItalicFont=CrimsonText-BoldItalic.ttf
 
 \setsansfont[
 Mapping=tex-text,
-Ligatures={Common}, 
+Ligatures={Common},
 Colour=AA0000,
 BoldFont=Lato-Bold.ttf,
 ItalicFont=Lato-Italic.ttf,
 BoldItalicFont=Lato-BoldItalic.ttf
 ]{Lato-Regular.ttf}
 	
-\setmonofont[Mapping=tex-text,Scale=0.72]{texgyrecursor-regular.otf} 
+\setmonofont[Mapping=tex-text,Scale=0.72]{texgyrecursor-regular.otf}
 
 \newfontface\scheader[SmallCapsFont={LinLibertine_R.otf},SmallCapsFeatures={Letters=SmallCaps}]{LinLibertine_R.otf}
 
-\newfontface\addressblock[Mapping={tex-text}, 
+\newfontface\addressblock[Mapping={tex-text},
 	Numbers={OldStyle},
 	Ligatures={Common}]{CrimsonText-Roman.ttf}
 
@@ -138,8 +138,8 @@ BoldItalicFont=Lato-BoldItalic.ttf
 
 %% Marginal header
 %% Note: as the document goes on you may need to introduce a (gradually increasing)
-%% \vspace element to keep the marginal header pleasingly aligned with the first 
-%% item in the body text. Like this: \marginhead{{\vskip 0.4em}Grants}, or 
+%% \vspace element to keep the marginal header pleasingly aligned with the first
+%% item in the body text. Like this: \marginhead{{\vskip 0.4em}Grants}, or
 %% \marginhead{{\vskip 0.8em}Service}. Experiment as needed.
 \newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize\vspace{-1em}\flushright #1}}}}
 
@@ -148,7 +148,7 @@ BoldItalicFont=Lato-BoldItalic.ttf
 % \newcommand{\amper}{{\fontspec[Scale=.95,Colour=AA0000]{Minion Pro Medium}\selectfont\&\,}}
 
 %% No bullets on labels
-\renewcommand{\labelitemi}{~} 
+\renewcommand{\labelitemi}{~}
 
 %% Custom hanging indent for vita items
 \def\ind{\hangindent=1 true cm\hangafter=1 \noindent}
@@ -175,23 +175,22 @@ BoldItalicFont=Lato-BoldItalic.ttf
 \begin{minipage}[t]{2.95in}
   \vspace{0.34in}
   \flushright
-    {\footnotesize 852 Centerwood Drive \\ \vspace{-0.05in} Charleston, \textsc{SC} 29412}  
+    {\footnotesize 852 Centerwood Drive \\ \vspace{-0.05in} Charleston, \textsc{SC} 29412}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{1.6in}
   \flushright
     {\footnotesize  \texttt{\href{tel:\myphone}{\myphone}} \, \faPhone} \\
-    {\footnotesize  \texttt{\href{https://github.com/samtay}{\mygithub}} \, \faGithub}  \\ 
+    {\footnotesize  \texttt{\href{https://github.com/samtay}{\mygithub}} \, \faGithub}  \\
     {\footnotesize  \texttt{\href{mailto:\myemail}{\myemail}} \, \faEnvelope} \\
     {\footnotesize  \texttt{\href{\myweb}{\myweb}} \, \faGlobe}
 \end{minipage}
 
 
-%% Name 
-% original format was medskip instead of negative vspace, this keeps things aligned.
-% need to decide which is better.
-%\medskip
-\vspace{-1em}
+%% Name
+% Original format was medskip instead of negative vspace, this keeps things
+% aligned. Need to decide which is better.
+\vspace{-1em} %\medskip
 \noindent{\LARGE\scheader \textsc{sam tay}}
 \reversemarginpar
 
@@ -252,7 +251,7 @@ BoldItalicFont=Lato-BoldItalic.ttf
 \ind Undergraduate Poster Session Presentation Prize, Joint Mathematics Meeting, 2011. \\
 
 \bigskip
- 
+
 
 %% Research
 \marginhead{\sffamily {\vskip 0em} research experience}
@@ -309,7 +308,7 @@ BoldItalicFont=Lato-BoldItalic.ttf
 \ind Kenyon College \hfill {\small Gambier, OH}
 \small
 \begin{itemize}
-  \item Attend class and assist with teaching Calculus and Maple syntax.
+  \item Attended class and assisted with teaching Calculus and Maple syntax.
 \end{itemize}
 \normalsize
 
@@ -320,7 +319,7 @@ BoldItalicFont=Lato-BoldItalic.ttf
 \marginhead{\sffamily {\vskip -0.3em} work \newline experience}
 
 \ind \emph{Software Developer} \hfill {\small August 2017 - Present}
-\vspace{0.1em}
+{\vskip 0.1em}
 
 \ind Wrinkl Inc. \hfill {\small Charleston, SC}
 \small
@@ -333,45 +332,69 @@ BoldItalicFont=Lato-BoldItalic.ttf
 \normalsize
 
 \ind \emph{Software Developer} \hfill {\small April 2017 - August 2017}
-\vspace{0.1em}
+{\vskip 0.1em}
 
 \ind ExpandShare \hfill {\small Charleston, SC}
 \small
 \begin{itemize}
   \item Built core features and microservices for a Learning Manage System.
-  \item Languages: Python, Javascript
+  \item Languages: Python, Javascript.
 \end{itemize}
 \normalsize
 
 \ind \emph{Applications Engineer} \hfill {\small May 2014 - February 2017}
-\vspace{0.1em}
+{\vskip 0.1em}
 
 \ind Blue Acorn \hfill {\small Charleston, SC}
 \small
 \begin{itemize}
   \item Developed reusable modules in an object oriented MVC eCommerce
     framework.
-  \item Contributed to internal infastructure in the form of deployment tools,
-    Hipchat addons, and a docker composition-machine management tool.
+  \item Contributed to infastructure in the form of deployment tools and a
+    docker composition-machine management tool.
+  \item Led an agile team and mentored junior developers.
   \item Languages: PHP, Javascript, Bash.
 \end{itemize}
 \normalsize
 
-\ind \emph{Reporting Analyst} \hfill {\small September 2013 - May 2014}
-\vspace{0.1em}
+%%%% This isn't really relevant
+%\ind \emph{Reporting Analyst} \hfill {\small September 2013 - May 2014}
+%\vspace{0.1em}
 
-\ind SIB Development \& Consulting \hfill {\small Charleston, SC}
-\small
-\begin{itemize}
-  \item Validated client savings using Microsoft Excel and Adobe Acrobat.
-  \item 
-\end{itemize}
-\normalsize
+%\ind SIB Development \& Consulting \hfill {\small Charleston, SC}
+%\small
+%\begin{itemize}
+  %\item Validated client savings using Microsoft Excel and Adobe Acrobat.
+  %\item
+%\end{itemize}
+%\normalsize
 
 \bigskip
 
-%\newpage
 
-\medskip
+%% Technical skills
+\marginhead{\sffamily technical \newline skills}
+
+\ind \emph{Programming Languages}
+\small
+\begin{itemize}
+  \item Fluent in Haskell, Javascript, PHP, Python.
+  \item Intermediate experience with C,  C++, Bash.
+\end{itemize}
+\normalsize
+
+\ind \emph{Mathematical Software}
+\small
+\begin{itemize}
+  \item Maple, Mathematica, Matlab.
+\end{itemize}
+\normalsize
+
+\ind \emph{Other Technologies}
+\small
+\begin{itemize}
+  \item Docker, Ansible, RabbitMQ, Postgres, MySQL.
+\end{itemize}
+\normalsize
 
 \end{document}
