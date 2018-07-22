@@ -7,4 +7,4 @@ Personal resume in LaTeX
 First get [stack](https://docs.haskellstack.org/en/stable/README/#how-to-install)
 and [texlive](http://www.tug.org/texlive/).
 
-Then run `./build.hs` to build all of the pdf artifacts.
+Then run `./build.hs`.
