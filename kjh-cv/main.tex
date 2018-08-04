@@ -65,7 +65,7 @@
 \def\myphone{(631) 291-3866}
 \def\myfax{}
 \def\mytwitter{}
-\def\mygithub{@samtay}
+\def\mygithub{samtay}
 \def\myversion{}
 \def\myrevision{}
 
@@ -172,26 +172,31 @@ BoldItalicFont=Lato-BoldItalic.ttf
 %%% Address and contact block
 %%%------------------------------------------------------------------------
 \hfill
-\begin{minipage}[t]{2.95in}
-  \vspace{0.34in}
-  \flushright
-    {\footnotesize 852 Centerwood Drive \\ \vspace{-0.05in} Charleston, \textsc{SC} 29412}
-\end{minipage}
-\hfill
 \begin{minipage}[t]{1.6in}
   \flushright
-    {\footnotesize  \texttt{\href{tel:\myphone}{\myphone}} \, \faPhone} \\
-    {\footnotesize  \texttt{\href{https://github.com/samtay}{\mygithub}} \, \faGithub}  \\
-    {\footnotesize  \texttt{\href{mailto:\myemail}{\myemail}} \, \faEnvelope} \\
-    {\footnotesize  \texttt{\href{\myweb}{\myweb}} \, \faGlobe}
+    \footnotesize
+      \href{tel:\myphone}{\myphone} \, \faPhone \\
+      \vspace{.2em}
+      \href{https://github.com/samtay}{\mygithub} \, \faGithub  \\
+      \vspace{.2em}
+      \href{mailto:\myemail}{\myemail} \, \faEnvelope \\
+      \vspace{.2em}
+      \href{\myweb}{samtay.github.io} \, \faGlobe
+    \normalsize
 \end{minipage}
 
 
 %% Name
 % Original format was medskip instead of negative vspace, this keeps things
 % aligned. Need to decide which is better.
-\vspace{-1em} %\medskip
-\noindent{\LARGE\scheader \textsc{sam tay}}
+\vspace{-.69in} %\medskip
+\noindent{\LARGE\scheader \textsc{samuel tay}} \\
+
+\vspace{-.03in} %\medskip
+\footnotesize
+  \noindent 852 Centerwood Drive \\
+  \noindent Charleston, \textsc{SC} 29412
+\normalsize
 \reversemarginpar
 
 \bigskip
