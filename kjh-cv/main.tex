@@ -169,38 +169,28 @@ BoldItalicFont=Lato-BoldItalic.ttf
 
 
 %%%------------------------------------------------------------------------
-%%% Address and contact block
+%%% Name, address and contact block
 %%%------------------------------------------------------------------------
-\hfill
-\begin{minipage}[t]{1.6in}
-  \flushright
-    \footnotesize
-      \href{tel:\myphone}{\myphone} \, \faPhone \\
-      \vspace{.2em}
-      \href{https://github.com/samtay}{\mygithub} \, \faGithub  \\
-      \vspace{.2em}
-      \href{mailto:\myemail}{\myemail} \, \faEnvelope \\
-      \vspace{.2em}
-      \href{\myweb}{samtay.github.io} \, \faGlobe
-    \normalsize
-\end{minipage}
+\begin{center}
+\noindent{\Huge\scheader \textsc{samuel tay}} \\
+\vspace{.6em}
 
-
-%% Name
-% Original format was medskip instead of negative vspace, this keeps things
-% aligned. Need to decide which is better.
-\vspace{-.69in} %\medskip
-\noindent{\LARGE\scheader \textsc{samuel tay}} \\
-
-\vspace{-.03in} %\medskip
 \footnotesize
-  \noindent 852 Centerwood Drive \\
-  \noindent Charleston, \textsc{SC} 29412
+  \noindent 852 Centerwood Drive, Charleston, \textsc{SC} 29412 \\
+  \vspace{.3em}
+  \faGlobe \, \href{\myweb}{samtay.github.io}
+  $\enspace | \enspace$
+  \faGithub \, \href{https://github.com/samtay}{\mygithub}
+  $\enspace | \enspace$
+  \faPhone \, \href{tel:\myphone}{\myphone}
+  $\enspace | \enspace$
+  \faEnvelope \, \href{mailto:\myemail}{\myemail}
 \normalsize
-\reversemarginpar
+\end{center}
 
 \bigskip
-\medskip
+
+\reversemarginpar
 
 %% Education
 \marginhead{\sffamily {{\vskip -0.03em} education}}
@@ -293,15 +283,6 @@ BoldItalicFont=Lato-BoldItalic.ttf
 \normalsize
 
 \bigskip
-%\newpage
-
-
-%%%%% Next page, start numbering!
-%\newpage
-%\pagenumbering{arabic}
-%\setcounter{page}{2}
-%%%%%
-
 
 %% Teaching
 \marginhead{\sffamily {\vskip -0.3em} teaching \newline experience}
