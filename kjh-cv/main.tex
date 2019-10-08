@@ -1,3 +1,4 @@
+%! TeX program = lualatex
 %%% A template to produce a nice-looking Curriculum Vitae.
 %%% Kieran Healy <kjhealy@gmail.com>
 %%% Most recent version is at http://kjhealy.github.com/kjh-vita
@@ -59,7 +60,7 @@
 \def\mybibliocommand{}
 \def\mysubtitle{}
 \def\myaffiliation{}
-\def\myaddress{852 Centerwood Drive}
+\def\myaddress{4222 4th Ave NE, Seattle, WA 98105}
 \def\myemail{sam.chong.tay@gmail.com}
 \def\myweb{https://samtay.github.io}
 \def\myphone{(631) 291-3866}
@@ -122,7 +123,7 @@ BoldFont=Lato-Bold.ttf,
 ItalicFont=Lato-Italic.ttf,
 BoldItalicFont=Lato-BoldItalic.ttf
 ]{Lato-Regular.ttf}
-	
+
 \setmonofont[Mapping=tex-text,Scale=0.72]{texgyrecursor-regular.otf}
 
 \newfontface\scheader[SmallCapsFont={LinLibertine_R.otf},SmallCapsFeatures={Letters=SmallCaps}]{LinLibertine_R.otf}
@@ -176,7 +177,8 @@ BoldItalicFont=Lato-BoldItalic.ttf
 \vspace{.6em}
 
 \footnotesize
-  \noindent 852 Centerwood Drive, Charleston, \textsc{SC} 29412 \\
+  \noindent 4222 4th Ave NE, Seattle, \textsc{WA} 98105 \\
+  %\noindent 4222 4\textsuperscript{th} Avenue Northeast, Seattle, \textsc{WA} 98105 \\
   \vspace{.3em}
   \faGlobe \, \href{\myweb}{samtay.github.io}
   $\enspace | \enspace$
@@ -195,8 +197,14 @@ BoldItalicFont=Lato-BoldItalic.ttf
 %% Education
 \marginhead{\sffamily {{\vskip -0.03em} education}}
 
-\ind B.A., Mathematics \& Scientific Computing, Kenyon College, 2013. \\
-\footnotesize
+\ind Ph.D., Statistics \hfill 2019 - Present
+
+\noindent University of Washington \hfill Seattle, WA \\
+
+\ind B.A., Mathematics \& Scientific Computing \hfill 2009 - 2013
+
+\noindent Kenyon College \hfill Gambier, OH \\
+\ind \footnotesize
   Thesis: \emph{Logic via Algebra}. Awarded distinction. \\
   GPA: 3.91 \\
   Class Rank: 16/409
@@ -210,7 +218,8 @@ BoldItalicFont=Lato-BoldItalic.ttf
 \marginhead{\sffamily publications}
 
 \ind Nathan Gabriel, Katherine Peske, Lara Pudwell, and Samuel Tay. 2012.
-  ``\href{http://arxiv.org/abs/1110.2225}{Pattern Avoidance in Ternary Trees}.''
+
+\noindent ``\href{http://arxiv.org/abs/1110.2225}{Pattern Avoidance in Ternary Trees}.''
   \emph{Journal of Integer Sequences} 15:12.1.5. \vspace{0.05in}
 
 \bigskip
@@ -313,39 +322,49 @@ BoldItalicFont=Lato-BoldItalic.ttf
 %% Work
 \marginhead{\sffamily {\vskip -0.25em} work \newline experience}
 
-\ind \emph{Software Developer} \hfill {\small August 2017 - Present}
+\ind \emph{Backend Software Engineer} \hfill {\small December 2018 - September 2019}
 {\vskip 0.1em}
-
-\ind Wrinkl Inc. \hfill {\small Charleston, SC}
+\ind SimSpace Corporation \hfill {\small Remote}
 \small
 \begin{itemize}
-  \item Developed a websocket-driven chat application in Haskell.
-  \item Leveraged advanced type system features to achieve program correctness.
-  \item Languages: Haskell, Nix.
+  \item Created a realistic network simulation product for cyber security
+    training.
+  \item Leveraged advanced type system features to achieve a high level of
+    code safety.
+  \item Languages: Haskell, SQL.
+\end{itemize}
+\normalsize
+
+\ind \emph{Full Stack Developer} \hfill {\small August 2017 - September 2019}
+{\vskip 0.1em}
+\ind Wrinkl Inc. \hfill {\small Remote}
+\small
+\begin{itemize}
+  \item Developed a websocket-driven chat application, supporting
+    web, iOS, and Android apps.
+  \item Languages: Haskell, SQL, Nix.
 \end{itemize}
 \normalsize
 
 \ind \emph{Software Developer} \hfill {\small April 2017 - August 2017}
 {\vskip 0.1em}
-
 \ind ExpandShare \hfill {\small Charleston, SC}
 \small
 \begin{itemize}
-  \item Built core features and microservices for a Learning Manage System.
+  \item Built core features and microservices for a Learning Manage System
+    within Django.
   \item Languages: Python, Javascript.
 \end{itemize}
 \normalsize
 
 \ind \emph{Applications Engineer} \hfill {\small May 2014 - February 2017}
 {\vskip 0.1em}
-
 \ind Blue Acorn \hfill {\small Charleston, SC}
 \small
 \begin{itemize}
   \item Developed reusable modules in an object oriented MVC eCommerce
     framework.
-  \item Contributed to infastructure in the form of deployment tools and a
-    docker composition-machine management tool.
+  \item Founded an educational Functional Programming group with weekly meetups.
   \item Led an agile team and mentored junior developers.
   \item Languages: PHP, Javascript, Bash.
 \end{itemize}
@@ -387,7 +406,7 @@ BoldItalicFont=Lato-BoldItalic.ttf
 \ind \emph{Other Technologies}
 \small
 \begin{itemize}
-  \item Docker, Ansible, RabbitMQ, Postgres, MySQL.
+  \item Kubernetes, Docker, Ansible, RabbitMQ, Postgres, MySQL.
 \end{itemize}
 \normalsize
 
