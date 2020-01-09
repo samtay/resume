@@ -8,3 +8,9 @@ dist
 *.bcf
 *.out
 *.run.xml
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.xdv
+*.bbl
+*.blg
