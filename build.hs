@@ -1,6 +1,6 @@
 #!/usr/bin/env stack
 {- stack runghc
-  --resolver lts-11.14
+  --resolver lts-15.5
   --install-ghc
   --package shake
 -}
