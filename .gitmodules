@@ -1,0 +1,3 @@
+[submodule "statements"]
+	path = statements
+	url = git@github.com:samtay/cover-letters.git
