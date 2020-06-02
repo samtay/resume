@@ -16,7 +16,6 @@ import Development.Shake.Util
 main :: IO ()
 main = shakeArgs shakeOptions{shakeFiles="dist", shakeProgress=progressSimple} $ do
   let targets = [ "awesome-cv.pdf"
-                , "classic-cv.pdf"
                 , "kjh-cv.pdf"
                 ]
   statements <- liftIO $ fmap takeDirectory1 <$> getDirectoryFilesIO "statements" ["*/main.tex"]
