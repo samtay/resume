@@ -4,7 +4,7 @@ set -eo pipefail
 main() {
   company_name="$1"
   company_label="$2"
-  company_dir="cover_letters/$company_name"
+  company_dir="statements/$company_name"
   declare -a resources=("awesome-cv.cls" "fontawesome.sty" "fonts")
 
   mkdir "$company_dir"
