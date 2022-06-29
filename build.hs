@@ -15,8 +15,8 @@ import Development.Shake.Util
 -- not exist, do the logic found in new_coverletter.sh
 main :: IO ()
 main = shakeArgs shakeOptions{shakeFiles="dist", shakeProgress=progressSimple} $ do
-  let targets = [ "awesome-cv.pdf"
-                , "kjh-cv.pdf"
+  let targets = [ "resume.pdf"
+                , "cv.pdf"
                 ]
   statements <- liftIO $ fmap takeDirectory1 <$> getDirectoryFilesIO "statements" ["*/main.tex"]
 
