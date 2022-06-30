@@ -60,8 +60,8 @@
 \def\mybibliocommand{}
 \def\mysubtitle{}
 \def\myaffiliation{}
-\def\myaddress{4222 4th Ave NE, Seattle, WA 98105}
-\def\myemail{sam.chong.tay@gmail.com}
+\def\myaddress{225 NW Wesley Way, Poulsbo, WA 98370}
+\def\myemail{samctay@pm.me}
 \def\myweb{https://samtay.github.io}
 \def\myphone{(631) 291-3866}
 \def\myfax{}
@@ -177,12 +177,11 @@ BoldItalicFont=Lato-BoldItalic.ttf
 \vspace{.6em}
 
 \footnotesize
-  \noindent 4222 4th Ave NE, Seattle, \textsc{WA} 98105 \\
-  %\noindent 4222 4\textsuperscript{th} Avenue Northeast, Seattle, \textsc{WA} 98105 \\
+  \noindent \myaddress \\
   \vspace{.3em}
   \faGlobe \, \href{\myweb}{samtay.github.io}
   $\enspace | \enspace$
-  \faGithub \, \href{https://github.com/samtay}{\mygithub}
+  \faGithub \, \href{https://github.com/\mygithub}{\mygithub}
   $\enspace | \enspace$
   \faPhone \, \href{tel:\myphone}{\myphone}
   $\enspace | \enspace$
@@ -196,6 +195,16 @@ BoldItalicFont=Lato-BoldItalic.ttf
 
 %% Education
 \marginhead{\sffamily {{\vskip -0.03em} education}}
+
+\ind M.S., Computer Science \hfill {\small 2020 - Present}
+
+\noindent University of Washington \hfill {\small Seattle, WA} \\
+\ind \footnotesize
+  Courses: Applied Cryptography, Formal Verification, Network Systems, etc. \\
+  Current GPA: 4.00 \\
+  Enrollment: Part-time
+\normalsize
+\vspace{0.05in}
 
 \ind B.A., Mathematics \& Scientific Computing \hfill {\small 2009 - 2013}
 
@@ -212,47 +221,64 @@ BoldItalicFont=Lato-BoldItalic.ttf
 %% Work
 \marginhead{\sffamily {\vskip -0.25em} work \newline experience}
 
-\ind \emph{Teaching Assistant} \hfill {\small September 2019 - June 2020}
+\ind \emph{Senior Software Engineer} \hfill {\small Apr 2022 - Present}
 {\vskip 0.1em}
-\ind University of Washington \hfill {\small Seattle, WA}
+\ind Phylum \hfill {\small Remote}
 \small
 \begin{itemize}
-  \item Write lesson plans and lead recitation classes for undergraduate
-    probability and statistics courses.
-  \item Take graduate classes such as Statistical Inference, Network
-    Optimization, Graphical Models, Machine Learning, Programming
-    Language Theory.
-  \item Languages: Coq, Python, R.
+  \item Developed APIs for multiple consumers (web \& CLI) to interact with our open source
+    package scoring data.
+  \item Maintained an interface between the OLAP and OLTP areas of our product.
+  \item Languages: Rust, SQL.
+  \item Technologies: AWS, Docker, Kubernetes, Postgres, Redis, HBase, Spark.
 \end{itemize}
 \normalsize
 
-\ind \emph{Backend Software Engineer} \hfill {\small December 2018 - September 2019}
+\ind \emph{Software Engineer III} \hfill {\small Dec 2018 - Sep
+2019, Jun 2020 - Apr 2022}
 {\vskip 0.1em}
 \ind SimSpace Corporation \hfill {\small Remote}
 \small
 \begin{itemize}
-  \item Created a realistic network simulation product for cybersecurity
-    training.
-  \item Leveraged advanced type system features to achieve a high level of
-    code safety.
+  \item Developed APIs for various services that comprise a realistic network
+    simulation product for cybersecurity training.
+  \item Regularly solved performance problems by analyzing and improving
+    Postgres query plans.
   \item Languages: Haskell, SQL.
-  \item Technologies: AWS S3, Docker, Kubernetes, Minio, PostgreSQL.
+  \item Technologies: Docker, Kubernetes, Minio, PostgreSQL.
 \end{itemize}
 \normalsize
 
-\ind \emph{Full Stack Developer} \hfill {\small August 2017 - September 2019}
+\ind \emph{Teaching Assistant} \hfill {\small Sep 2019 - Jun 2020}
+{\vskip 0.1em}
+\ind University of Washington \hfill {\small Seattle, WA}
+\small
+\begin{itemize}
+  \item Wrote lesson plans and led recitation classes for undergraduate
+    probability and statistics courses.
+  \item Took graduate classes such as Statistical Inference, Network
+    Optimization, Graphical Models, and Machine Learning.
+  \item Languages: Coq, Python, R.
+\end{itemize}
+\normalsize
+
+\pagebreak
+
+\ind \emph{Full Stack Engineer} \hfill {\small Aug 2017 - Nov 2018}
 {\vskip 0.1em}
 \ind Wrinkl Inc. \hfill {\small Remote}
 \small
 \begin{itemize}
   \item Developed a websocket-driven chat application, supporting
     web, iOS, and Android apps.
+  \item Used the Reflex FRP library to develop highly dynamic user interfaces
+    with declarative strongly-typed code.
   \item Languages: Haskell, Nix, SQL.
   \item Technologies: Hydra, NixOS, PostgreSQL, Reflex-Platform.
 \end{itemize}
 \normalsize
 
-\ind \emph{Software Developer} \hfill {\small April 2017 - August 2017}
+\ind \emph{Software Developer} \hfill {\small Apr 2017 - Aug 2017}
 {\vskip 0.1em}
 \ind ExpandShare \hfill {\small Charleston, SC}
 \small
@@ -264,17 +290,16 @@ BoldItalicFont=Lato-BoldItalic.ttf
 \end{itemize}
 \normalsize
 
-\ind \emph{Applications Engineer} \hfill {\small May 2014 - February 2017}
+\ind \emph{Backend Web Developer} \hfill {\small May 2014 - Feb 2017}
 {\vskip 0.1em}
 \ind Blue Acorn \hfill {\small Charleston, SC}
 \small
 \begin{itemize}
-  \item Developed reusable modules in an object oriented MVC eCommerce
-    framework.
+  \item Developed reusable modules in an object oriented MVC eCommerce framework.
   \item Founded an educational Functional Programming group with weekly meetups.
   \item Led an agile team and mentored junior developers.
   \item Languages: PHP, Javascript, Bash.
-  \item Technologies: KnockoutJS, Magento, MySQL, RabbitMQ.
+  \item Technologies: Magento, MySQL, RabbitMQ.
 \end{itemize}
 \normalsize
 
@@ -355,8 +380,8 @@ BoldItalicFont=Lato-BoldItalic.ttf
 \ind \emph{Programming Languages}
 \small
 \begin{itemize}
-  \item Fluent in Haskell, Python, PHP, Javascript.
-  \item Experience with Bash, C, C++, R, Ruby.
+  \item Fluent in Rust, Haskell, Python, PHP, Javascript.
+  \item Experience with Bash, C, C++, R.
 \end{itemize}
 \normalsize
 
@@ -370,7 +395,7 @@ BoldItalicFont=Lato-BoldItalic.ttf
 \ind \emph{Other Technologies}
 \small
 \begin{itemize}
-  \item Kubernetes, Docker, Ansible, RabbitMQ, Postgres, MySQL.
+  \item Kubernetes, Docker, Ansible, RabbitMQ, Redis, Postgres, MySQL.
 \end{itemize}
 \normalsize
 
