@@ -1,4 +1,0 @@
-- pattern: .*\.tex$
-  exclude: .*~$
-  command: ./build.hs
-

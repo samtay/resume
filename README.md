@@ -4,7 +4,5 @@ Personal resume in LaTeX
 
 ### build
 
-First get [stack](https://docs.haskellstack.org/en/stable/README/#how-to-install)
-and [texlive](http://www.tug.org/texlive/).
-
-Then run `./build.hs`.
+First get [just](https://github.com/casey/just) and [texlive](http://www.tug.org/texlive/).
+Then run `just [build|watch] [resume|cv]`.
